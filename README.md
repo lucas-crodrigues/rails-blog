@@ -40,7 +40,7 @@ $ ruby --version && irb
 
 ### Install
 
-In the terminal, go to where you wish the repo to be located and run this command.
+In the terminal, navigate to where you wish the repo to be located and run these commands.
 
 ```
 $ git clone https://github.com/lucas-crodrigues/ruby-capstone.git
