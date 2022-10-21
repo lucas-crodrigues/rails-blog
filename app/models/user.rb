@@ -3,4 +3,7 @@ class User < ApplicationRecord
   has_many :posts, foreign_key: 'author_id', class_name: 'Post'
   has_many :likes, foreign_key: 'author_id', class_name: 'Like'
 
+  def last_three_posts
+    posts.last(3)
+  end
 end
