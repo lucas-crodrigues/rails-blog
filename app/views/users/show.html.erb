@@ -13,7 +13,9 @@
 </div>
 <% @posts.each do |post| %>
   <div class="post-mini bordered">
+  <%= link_to user_post_path(@user, post) do %>
     <h3>Post #<%= post.id %> <%= post.title%> </h3>
+    <% end %>
     <p><%= post.text %></p>
     <small>Comments:<%= post.comments_counter%>, Likes:<%= post.likes_counter%></small>
   </div>
