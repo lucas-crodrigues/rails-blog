@@ -1,0 +1,15 @@
+<div id="newComment">
+        <div id="postHeader">
+                <h3 class="post-title">Post <%= @post.id %> by <%= @user.name %> </h3>
+                <label class="counters">Comments:<%= @post.comments_counter %> Likes:<%= @post.likes_counter %> </label>
+        </div>
+        <p><%= @post.text %></p>
+       <div id="formComment" >
+            <%= form_with model: Comment.new, url: user_post_comments_path do |f| %>
+            <%=f.hidden_field :post_id, :value => "#{@post.id}", readonly: true%>
+            <%= f.label :text %><br>
+            <%= f.text_field :text %><br>
+            <%= f.submit "Add Comment" %>
+            <% end %>
+        </div>
+</div>
