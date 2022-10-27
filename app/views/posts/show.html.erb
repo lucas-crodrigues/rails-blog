@@ -1,14 +1,18 @@
 <h1>Posts show</h1>
 <p>Here is a specific post for specific user</p>
-<div>
- <p>Post #<%= @post.id %> by <%=@post.author.name %><p>
+<div class="post bordered">
+  <div>
+    <p>Post #<%= @post.id %> by <%=@post.author.name %><p>
+    <small>Comments:<%= @post.comments_counter%>, Likes:<%= @post.likes_counter%></small>
+  </div>
      <div>
-      <h1><%= @post.title %></h1>
+      <h2><%= @post.title %></h2>
       <p><%= @post.text %><p>
      </div>
-     <div>
+     </div>
+     <div class="comments bordered">
+     <h3>Comments: </h3>
        <% @post.comments.each do |comment| %>
           <p><%= comment.author.name%> : <%= comment.text %>
        <% end %>
      </div>
-</div>

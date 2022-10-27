@@ -1,23 +1,23 @@
 <h1>Posts index</h1>
 <p>Here is a list posts for a specific user</p>
-<div>
-  <img src="<%= @user.photo %>">
-  <h2><%= @user.name %></h2>
+<div class="user-index bordered">
+  <div>
+    <img src="<%= @user.photo %>">
+    <h1><%= @user.name %></h1>
+  </div>
+  <span>Number of posts:<%=@user.posts_counter %></span>
 </div>
-<p>Number of posts:<%=@user.posts_counter %></p> <br>
 <% @user.all_posts.each do  |post| %>
-    <div>
-      <%= link_to user_post_path(@user, post) do %>
-      <h3>Post #<%= post.id %> <%= post.title%> </h3>
-      <% end %>
-      <p><%= post.text %></p>
-      <span>Comments:<%= post.comments_counter%>,</span>
-      <span>Likes:<%= post.likes_counter%>,</span>
-    </div>
-    <div>
+  <div class="post-mini bordered">
+    <%= link_to user_post_path(@user, post) do %>
+    <h3>Post #<%= post.id %> <%= post.title%> </h3>
+    <% end %>
+    <p><%= post.text %></p>
+    <small>Comments:<%= post.comments_counter%>, Likes:<%= post.likes_counter%></small>
+  </div>
+    <div class="comments bordered">
       <% post.last_five_comments.each do |comment| %>
          <p><%=comment.author.name %>:<%= comment.text %></p>
       <% end %>
     </div>
-    <br>
 <% end %>

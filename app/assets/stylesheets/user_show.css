@@ -1,0 +1,28 @@
+.user-index div {
+  display: flex;
+  align-items: center;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.bio * {
+  margin: 1rem 2rem;
+}
+
+.post-mini {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.post-mini > * {
+  margin: 1rem 2rem;
+}
+
+.post-mini small {
+  align-self: flex-end;
+}

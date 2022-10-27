@@ -1,0 +1,21 @@
+.user-index {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.user-index a {
+  display: flex;
+  align-items: center;
+}
+
+.user-index img {
+  margin-right: 2rem;
+  height: 8rem;
+  width: 8rem;
+}
+
+.user-index span {
+  margin-right: 2rem;
+}
