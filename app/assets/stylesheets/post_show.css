@@ -1,0 +1,14 @@
+.post {
+  display: flex;
+  flex-direction: column;
+}
+
+.post > * {
+  margin: 1rem;
+}
+
+.post :first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

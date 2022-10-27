@@ -1,2 +1,24 @@
 <h1>Users show</h1>
 <p>Here is a specific user</p>
+<div class="user-index bordered">
+  <div>
+    <img src="<%= @user.photo %>">
+    <h1><%= @user.name %></h1>
+  </div>
+  <span>Number of posts:<%=@user.posts_counter %></span>
+</div>
+<div class="bio bordered">
+<h4>Bio</h4>
+<p><%= @user.bio %></p>
+</div>
+<% @posts.each do |post| %>
+  <div class="post-mini bordered">
+  <%= link_to user_post_path(@user, post) do %>
+    <h3>Post #<%= post.id %> <%= post.title%> </h3>
+    <% end %>
+    <p><%= post.text %></p>
+    <small>Comments:<%= post.comments_counter%>, Likes:<%= post.likes_counter%></small>
+  </div>
+<% end %>
+<br>
+<%= button_to "See all posts", user_posts_path(@user.id), method:'get'%>

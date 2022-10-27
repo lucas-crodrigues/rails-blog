@@ -1,2 +1,12 @@
 <h1>Users index</h1>
 <p>Here is a list of users</p>
+<% @users.each  do |user| %>
+  <div class="user-index bordered">
+  <%= link_to  user  do %>
+  <img src="<%= user.photo %>">
+  <h2><%= user.name %></h2>
+  <% end %>
+  <span>Number of posts: <%= user.posts_counter %></span>
+  </div> <br>
+  
+  <% end %>  
