@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .bordered {
+.bordered {
   border: 0.5px solid black;
   margin-bottom: 1rem;
- }
+}
