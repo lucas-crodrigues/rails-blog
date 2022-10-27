@@ -16,3 +16,5 @@
           <p><%= comment.author.name%> : <%= comment.text %>
        <% end %>
      </div>
+     <%= button_to link_to "New Comment", new_user_post_comment_path(author_id: @user.id, post_id:@post.id) %>
+     <%= button_to "Like", user_post_likes_path(@user, @post), params: { like: { author_id: @user.id, post_id: @post.id}}%>
