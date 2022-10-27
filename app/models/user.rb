@@ -9,4 +9,8 @@ class User < ApplicationRecord
   def last_three_posts
     posts.order('created_at Desc').limit(3)
   end
+
+  def all_posts
+    posts.order('created_at Desc')
+  end
 end
