@@ -1,2 +1,14 @@
 <h1>Posts show</h1>
 <p>Here is a specific post for specific user</p>
+<div>
+ <p>Post #<%= @post.id %> by <%=@post.author.name %><p>
+     <div>
+      <h1><%= @post.title %></h1>
+      <p><%= @post.text %><p>
+     </div>
+     <div>
+       <% @post.comments.each do |comment| %>
+          <p><%= comment.author.name%> : <%= comment.text %>
+       <% end %>
+     </div>
+</div>
