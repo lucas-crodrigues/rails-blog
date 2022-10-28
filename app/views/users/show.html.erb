@@ -16,9 +16,10 @@
   <%= link_to user_post_path(@user, post) do %>
     <h3>Post #<%= post.id %> <%= post.title%> </h3>
     <% end %>
-    <p><%= post.text %></p>
+    <p><%= truncate(post.text, length:150) %></p>
     <small>Comments:<%= post.comments_counter%>, Likes:<%= post.likes_counter%></small>
   </div>
 <% end %>
 <br>
 <%= button_to "See all posts", user_posts_path(@user.id), method:'get'%>
+<%= button_to link_to "New Post", new_user_post_path(@user)%>
