@@ -79,13 +79,6 @@ $ rspec ./spec/#{filename}_spec.rb
 
 - LinkedIn: [Lucas Costa Rodrigues](https://www.linkedin.com/in/lucascostarodrigues/)
 
-
-👤 **Ben Kiboma**
-
-- GitHub: [@kiboma2021](https://github.com/kiboma2021)
-- Twitter: [@BenOmayio](https://twitter.com/omayiobenj)
-- LinkedIn: [@BenOmayio](https://www.linkedin.com/in/ben-kiboma/)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
