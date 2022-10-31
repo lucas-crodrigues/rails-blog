@@ -5,9 +5,9 @@ RSpec.describe 'User pages functionality: User index page ', type: :feature do
     User.create(name: 'Shrek', photo: 'https://cdns-images.dzcdn.net/images/artist/6a69bf26f8d1e51b67ac0c11a8ba1a77/500x500.jpg',
                 bio: 'Swamp dweller, Onion eater')
   end
-  
+
   let!(:user2) do
-     User.create(name: 'Donkey', photo: 'https://i.pinimg.com/736x/2b/30/e9/2b30e9476db1ec0823c7142e0e5ef75a--shrek-character-shrek-donkey.jpg',
+    User.create(name: 'Donkey', photo: 'https://i.pinimg.com/736x/2b/30/e9/2b30e9476db1ec0823c7142e0e5ef75a--shrek-character-shrek-donkey.jpg',
                 bio: 'Rescuer of princesses, Layer of dragons')
   end
 
