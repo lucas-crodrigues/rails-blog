@@ -78,3 +78,5 @@ group :test do
 end
 
 gem 'ffi'
+
+gem 'devise'
