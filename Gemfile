@@ -80,3 +80,5 @@ end
 gem 'ffi'
 
 gem 'devise'
+
+gem 'mailcatcher'
