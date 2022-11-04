@@ -82,3 +82,5 @@ gem 'ffi'
 gem 'devise'
 
 gem 'mailcatcher'
+
+gem 'cancancan'
