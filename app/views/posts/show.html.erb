@@ -14,6 +14,9 @@
      <h3>Comments: </h3>
        <% @post.comments.each do |comment| %>
           <p><%= comment.author.name%> : <%= comment.text %>
+          <% if can? :destroy, comment %>
+          <%= button_to 'Delete comment', user_post_comment_path(@user, @post, comment), method: :delete %>
+          <% end %>
        <% end %>
      </div>
      <%= button_to "See all posts", user_posts_path(@user.id), method:'get'%>

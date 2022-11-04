@@ -18,6 +18,9 @@
     <% end %>
     <p><%= truncate(post.text, length:150) %></p>
     <small>Comments:<%= post.comments_counter%>, Likes:<%= post.likes_counter%></small>
+    <% if can? :destroy, post %>
+    <%= button_to "Delete", user_post_path(@user, post), method: :delete %>
+    <% end %>
   </div>
 <% end %>
 <br>
