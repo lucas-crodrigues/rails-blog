@@ -17,8 +17,6 @@ class User < ApplicationRecord
   def all_posts
     posts.order('created_at Desc')
   end
-  
-  Roles = [ :admin , :default ]
 
   def is?(requested_role)
     self.role = requested_role.to_s
