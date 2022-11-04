@@ -21,4 +21,11 @@ class CommentsController < ApplicationController
   def comment_params
     params.require(:comment).permit(:text)
   end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    flash[:notice] = "Comment ##{params[:id]} has been deleted"
+    redirect_back(fallback_location: root_path)
+  end
 end
