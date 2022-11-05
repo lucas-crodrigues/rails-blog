@@ -1,11 +1,23 @@
 class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
+
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @user.all_posts }
+      format.json { render json: @user.all_posts }
+    end
   end
 
   def show
     @post = Post.includes(:comments, :author).find_by(author_id: params[:user_id], id: params[:id])
     @user = current_user
+
+    respond_to do |format|
+      format.html
+      format.xml { render xml: @post }
+      format.json { render json: @post.to_json(include: [:comments]) }
+    end
   end
 
   def new
